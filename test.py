@@ -8,8 +8,8 @@ import numpy as np
 import plotly.express as px
 from collections import deque
 
-# load_dotenv("../.env", override=True)
-load_dotenv()
+load_dotenv("../.env", override=True)
+# load_dotenv()
 
 class LRUCache:
     def __init__(self, max_size=50):
@@ -87,7 +87,7 @@ if "plot_ids" not in st.session_state:
 plot_ids = st.session_state["plot_ids"]
 
 if "plot_index" not in st.session_state:
-    st.session_state["plot_index"] = 0
+    st.session_state["plot_index"] = 134
 
 col1, col2 = st.columns([1,1])
 with col1:
@@ -291,9 +291,3 @@ if docs:
 
 else:
     st.info("No data found for the selected plot id.")
-
-
-if __name__ == '__main__':
-    a = [0.016, 0, -0.0207, -0.0203, -0.00221]
-    indices = [0, 1, 2, 3, 4]
-    print(find_calibration_points2(a, indices))
