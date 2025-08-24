@@ -8,8 +8,8 @@ import numpy as np
 import plotly.express as px
 from collections import deque
 
-load_dotenv("../.env", override=True)
-# load_dotenv()
+# load_dotenv("../.env", override=True)
+load_dotenv()
 
 class LRUCache:
     def __init__(self, max_size=50):
